@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caffe Mini - Trang chủ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg cm-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand brand-lockup" href="index.html">
+      <span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span>
+      <span><b>Caffe Mini</b><small>COFFEE • TEA • MORE</small></span>
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#showcase">Khám phá</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Thực đơn</a></li>
+        <li class="nav-item d-none" id="navSellItem"><a class="nav-link" href="sell.html">Bán hàng</a></li>
+        <li class="nav-item d-none" id="navAdminItem"><a class="nav-link" href="admin.html">Quản trị</a></li>
+        <li class="nav-item d-none" id="navProfileItem"><a class="nav-link" href="profile.html">Cá nhân</a></li>
+        <li class="nav-item" id="navLoginItem"><a class="nav-link nav-login-btn" href="login.html">Đăng nhập</a></li>
+        <li class="nav-item d-none" id="navLogoutItem"><a class="nav-link" href="#" id="logoutBtn">Đăng xuất</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-showcase">
+  <div class="container">
+    <div class="hero-topline">CAFFE MINI • HỆ THỐNG WEBSITE QUẢN LÝ BÁN HÀNG TẠI QUÁN</div>
+    <div class="hero-showcase-grid">
+      <div class="hero-showcase-copy">
+        <h1>Trải nghiệm quán nước hiện đại, gọn gàng và chuyên nghiệp.</h1>
+        <p>Thực đơn đẹp mắt, bán hàng nhanh chóng, thanh toán bằng tiền mặt hoặc QR, quản lý doanh thu – đánh giá – người dùng trên cùng một hệ thống.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-warning btn-lg px-4"><i class="fa-solid fa-book-open me-2"></i>Xem thực đơn</a>
+          <a href="login.html" class="btn btn-hero-outline btn-lg px-4"><i class="fa-solid fa-user-lock me-2"></i>Khu vực nhân viên</a>
+        </div>
+        <div class="hero-mini-stats">
+          <div><strong>18+</strong><span>Món phục vụ</span></div>
+          <div><strong>QR</strong><span>Thanh toán nhanh</span></div>
+          <div><strong>AI</strong><span>Trợ lý hỗ trợ</span></div>
+        </div>
+      </div>
+      <div class="hero-showcase-visual">
+        <div class="hero-visual-main"><img src="media/Ca_phe_sua.png" alt="Cà phê sữa"></div>
+        <div class="hero-visual-small small-one"><img src="media/Tra_dao.png" alt="Trà đào"></div>
+        <div class="hero-visual-small small-two"><img src="media/Bo_gia_dua_non.png" alt="Bơ già dừa non"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section-showcase" id="showcase">
+  <div class="showcase-row theme-coffee">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-copy">
+          <span class="showcase-kicker">COFFEE SELECTION</span>
+          <h2>Cà phê</h2>
+          <p>Những món cà phê quen thuộc như cà phê đen, cà phê sữa, bạc xỉu hay cacao cà phê được trình bày theo phong cách hiện đại, dễ lựa chọn và phù hợp với mô hình quán nước mini.</p>
+          <a href="#menu" class="btn btn-outline-light showcase-btn">Khám phá thêm</a>
+        </div>
+        <div class="showcase-media showcase-media-right">
+          <img src="media/Ca_phe_sua.png" alt="Cà phê">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-row theme-tea">
+    <div class="container">
+      <div class="showcase-grid reverse">
+        <div class="showcase-media"><img src="media/Tra_dao.png" alt="Trà và nước trái cây"></div>
+        <div class="showcase-copy">
+          <span class="showcase-kicker">TEA & FRUIT</span>
+          <h2>Trà & nước ép</h2>
+          <p>Thực đơn có trà đào, trà chanh, nước cam, nước ép dứa, dưa hấu, ổi, táo, chanh leo… mang lại cảm giác tươi sáng và trẻ trung cho website quán nước.</p>
+          <a href="#menu" class="btn btn-outline-dark showcase-btn">Khám phá thêm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-row theme-freeze">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-copy">
+          <span class="showcase-kicker">SPECIAL DRINKS</span>
+          <h2>Sinh tố & đồ uống đặc biệt</h2>
+          <p>Bơ già dừa non, matcha latte và các món đặc biệt giúp menu trở nên phong phú hơn, phù hợp với đối tượng khách hàng trẻ và trải nghiệm check-in đẹp mắt.</p>
+          <a href="#menu" class="btn btn-outline-success showcase-btn">Khám phá thêm</a>
+        </div>
+        <div class="showcase-media showcase-media-right">
+          <img src="media/Bo_gia_dua_non.png" alt="Sinh tố bơ già dừa non">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-row theme-snack">
+    <div class="container">
+      <div class="showcase-grid reverse">
+        <div class="showcase-media"><img src="media/Kho_ga.png" alt="Đồ ăn kèm"></div>
+        <div class="showcase-copy">
+          <span class="showcase-kicker">SNACK CORNER</span>
+          <h2>Đồ ăn kèm</h2>
+          <p>Bò khô, khô gà, hướng dương và một số món ăn nhẹ được hiển thị cùng thực đơn nước để website trông giống một quán bán hàng thực tế hơn.</p>
+          <a href="#menu" class="btn btn-outline-secondary showcase-btn">Khám phá thêm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-explorer" id="menu">
+  <div class="container">
+    <div class="section-heading text-center mb-4">
+      <span>MENU EXPLORER</span>
+      <h2>Thực đơn Caffe Mini</h2>
+      <p>Tra cứu nhanh món yêu thích theo nhóm sản phẩm, phù hợp cho khách hàng xem menu và nhân viên thao tác bán hàng.</p>
+    </div>
+
+    <div class="category-chips mb-4">
+      <button class="chip active" type="button" onclick="document.getElementById('filterCategory').value='all'; document.getElementById('filterCategory').dispatchEvent(new Event('change'))">Tất cả</button>
+      <button class="chip" type="button" onclick="document.getElementById('filterCategory').value='Cà phê'; document.getElementById('filterCategory').dispatchEvent(new Event('change'))">Cà phê</button>
+      <button class="chip" type="button" onclick="document.getElementById('filterCategory').value='Trà'; document.getElementById('filterCategory').dispatchEvent(new Event('change'))">Trà</button>
+      <button class="chip" type="button" onclick="document.getElementById('filterCategory').value='Trà sữa'; document.getElementById('filterCategory').dispatchEvent(new Event('change'))">Trà sữa</button>
+      <button class="chip" type="button" onclick="document.getElementById('filterCategory').value='Nước ép'; document.getElementById('filterCategory').dispatchEvent(new Event('change'))">Nước ép</button>
+      <button class="chip" type="button" onclick="document.getElementById('filterCategory').value='Sinh tố'; document.getElementById('filterCategory').dispatchEvent(new Event('change'))">Sinh tố</button>
+      <button class="chip" type="button" onclick="document.getElementById('filterCategory').value='Đồ ăn kèm'; document.getElementById('filterCategory').dispatchEvent(new Event('change'))">Đồ ăn kèm</button>
+    </div>
+
+    <div class="menu-toolbar mb-4">
+      <div class="search-box-pro"><i class="fa-solid fa-magnifying-glass"></i><input id="searchInput" placeholder="Tìm món bạn muốn..." /></div>
+      <select id="filterCategory" class="form-select"><option value="all">Tất cả danh mục</option></select>
+    </div>
+    <div id="productList" class="row g-4"></div>
+  </div>
+</section>
+
+<section class="system-section">
+  <div class="container">
+    <div class="system-panel">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <span class="story-kicker">HỆ THỐNG VẬN HÀNH</span>
+          <h3>Một quy trình bán hàng gọn gàng</h3>
+          <p>Từ xem thực đơn, tạo đơn, thanh toán đến ghi nhận đánh giá và theo dõi doanh thu, các bước được tổ chức trong một hệ thống thống nhất để nhân viên thao tác nhanh và quản lý dữ liệu tập trung.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="story-steps premium-steps">
+            <div><span>01</span><b>Xem menu</b></div>
+            <div><span>02</span><b>Tạo đơn</b></div>
+            <div><span>03</span><b>Thanh toán</b></div>
+            <div><span>04</span><b>Đánh giá</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="detailModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header"><div><span class="modal-kicker">CAFFE MINI</span><h5 class="modal-title mb-0">Chi tiết món</h5></div><button class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body p-4" id="detailBody"></div>
+  </div></div>
+</div>
+
+<div class="toast-container position-fixed top-0 end-0 p-3" id="toastArea"></div>
+<footer class="cm-footer-pro">
+  <div class="container py-4"><div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <div class="brand-lockup footer-brand"><span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span><span><b>Caffe Mini</b><small>Website quản lý bán hàng tại quán</small></span></div>
+    <small>© 2026 Caffe Mini • Hệ thống quản lý bán hàng</small>
+  </div></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded",()=>{
+    bootPage("home");
+    document.querySelectorAll('.category-chips .chip').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.category-chips .chip').forEach(x=>x.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+</script>
+</body>
+</html>

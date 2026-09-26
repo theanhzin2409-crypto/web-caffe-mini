@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Đăng nhập - Caffe Mini</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/><link rel="stylesheet" href="css/style.css"/></head>
+<body class="auth-bg-pro">
+<div class="auth-shell">
+  <div class="auth-visual d-none d-lg-flex">
+    <div class="auth-visual-overlay"></div>
+    <div class="auth-brand-copy">
+      <div class="brand-lockup mb-4"><span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span><span><b>Caffe Mini</b><small>MANAGEMENT SYSTEM</small></span></div>
+      <span class="hero-eyebrow"><span></span> STAFF ACCESS</span>
+      <h1>Vận hành quán<br>gọn hơn mỗi ngày.</h1>
+      <p>Đăng nhập để bán hàng, thanh toán, quản lý thực đơn và theo dõi hoạt động của Caffe Mini.</p>
+      <div class="auth-badges"><span><i class="fa-solid fa-cash-register"></i> POS bán hàng</span><span><i class="fa-solid fa-qrcode"></i> QR thanh toán</span><span><i class="fa-solid fa-chart-line"></i> Báo cáo</span></div>
+    </div>
+  </div>
+  <div class="auth-form-side">
+    <div class="auth-form-box">
+      <a href="index.html" class="auth-back"><i class="fa-solid fa-arrow-left"></i> Trang chủ</a>
+      <div class="auth-icon"><i class="fa-solid fa-user-shield"></i></div>
+      <h2>Chào mừng trở lại</h2><p class="text-muted mb-4">Đăng nhập dành cho quản trị viên và nhân viên.</p>
+      <form id="loginForm">
+        <div class="mb-3"><label class="form-label">Tên đăng nhập / Email</label><div class="input-icon-wrap"><i class="fa-solid fa-user"></i><input id="loginUser" class="form-control" placeholder="Nhập tài khoản" required/></div></div>
+        <div class="mb-3"><label class="form-label">Mật khẩu</label><div class="input-icon-wrap"><i class="fa-solid fa-lock"></i><input id="loginPass" type="password" class="form-control" placeholder="Nhập mật khẩu" required/></div></div>
+        <button class="btn btn-warning w-100 py-3 mt-2" type="submit"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Đăng nhập hệ thống</button>
+        <p class="text-center mt-4 mb-0 small text-muted">Chưa có tài khoản nhân viên? <a href="register.html" class="cm-link fw-bold">Đăng ký tại đây</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="toast-container position-fixed top-0 end-0 p-3" id="toastArea"></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script src="js/app.js"></script><script>document.addEventListener("DOMContentLoaded",()=>bootPage("login"));</script>
+</body></html>

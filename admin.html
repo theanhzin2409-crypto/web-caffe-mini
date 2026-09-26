@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản trị - Caffe Mini</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg cm-navbar sticky-top"><div class="container-fluid px-lg-4"><a class="navbar-brand brand-lockup" href="admin.html"><span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span><span><b>Caffe Mini</b><small>MANAGEMENT CENTER</small></span></a><div class="navbar-nav ms-auto align-items-lg-center gap-lg-1"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>Trang chủ</a><a class="nav-link" href="sell.html"><i class="fa-solid fa-cash-register me-1"></i>Bán hàng</a><a class="nav-link" href="profile.html"><i class="fa-solid fa-user me-1"></i>Cá nhân</a><span class="nav-link admin-user-chip"><i class="fa-solid fa-database me-1"></i>MySQL</span><span class="nav-link admin-user-chip"><i class="fa-solid fa-circle-user me-1"></i><span id="adminName">Admin</span></span><a class="nav-link" href="#" id="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket me-1"></i>Đăng xuất</a></div></div></nav>
+
+<div class="container-fluid px-lg-4 py-4 admin-page"><div class="admin-page-head mb-4"><div><span class="admin-kicker">MANAGEMENT CENTER</span><h1>Tổng quan vận hành</h1><p>Quản lý tập trung hoạt động bán hàng tại Caffe Mini.</p></div><div class="admin-head-badge"><i class="fa-solid fa-shield-halved"></i><span>Hệ thống quản trị<br><b>Đang hoạt động</b></span></div></div>
+<ul class="nav nav-pills cm-tabs gap-1 mb-4" id="adminTabs">
+  <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#dashTab"><i class="fa-solid fa-chart-pie me-2"></i>Dashboard</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#productTab"><i class="fa-solid fa-mug-hot me-2"></i>Thực đơn</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#orderTab"><i class="fa-solid fa-receipt me-2"></i>Đơn hàng</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#userTab"><i class="fa-solid fa-users me-2"></i>Người dùng</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#reviewTab"><i class="fa-solid fa-star me-2"></i>Đánh giá</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#revenueTab"><i class="fa-solid fa-chart-line me-2"></i>Doanh thu</button></li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="dashTab">
+    <div class="row g-3">
+      <div class="col-md-3"><div class="card cm-stat-card cm-stat-orange"><div class="card-body stat-body"><div><p>Doanh thu</p><h4 id="statRevenue">0đ</h4><small>Đã thanh toán</small></div><span class="stat-icon"><i class="fa-solid fa-wallet"></i></span></div></div></div>
+      <div class="col-md-3"><div class="card cm-stat-card cm-stat-yellow"><div class="card-body stat-body"><div><p>Đơn hàng</p><h4 id="statOrders">0</h4><small>Tổng số đơn</small></div><span class="stat-icon"><i class="fa-solid fa-receipt"></i></span></div></div></div>
+      <div class="col-md-3"><div class="card cm-stat-card cm-stat-brown"><div class="card-body stat-body"><div><p>Nhân viên</p><h4 id="statUsers">0</h4><small>Tài khoản nhân viên</small></div><span class="stat-icon"><i class="fa-solid fa-user-group"></i></span></div></div></div>
+      <div class="col-md-3"><div class="card cm-stat-card cm-stat-green"><div class="card-body stat-body"><div><p>Thực đơn</p><h4 id="statProducts">0</h4><small>Món đang quản lý</small></div><span class="stat-icon"><i class="fa-solid fa-mug-saucer"></i></span></div></div></div>
+    </div>
+    <div class="card border-0 shadow-sm mt-4"><div class="card-header bg-warning fw-bold">Đơn hàng gần đây</div><div class="card-body table-responsive"><table class="table cm-table"><thead><tr><th>Mã</th><th>Khách</th><th>Nhân viên</th><th>Tổng tiền</th><th>Trạng thái</th><th>Ngày</th></tr></thead><tbody id="recentOrders"></tbody></table></div></div>
+  </div>
+
+  <div class="tab-pane fade" id="productTab">
+    <div class="card border-0 shadow-sm mb-4"><div class="card-header bg-warning fw-bold"><span id="productFormTitle">Thêm món</span></div><div class="card-body"><form id="productForm" class="row g-3"><input type="hidden" id="pId" /><div class="col-md-4"><label class="form-label">Tên món</label><input id="pName" class="form-control" required /></div><div class="col-md-2"><label class="form-label">Loại</label><input id="pCategory" class="form-control" required /></div><div class="col-md-2"><label class="form-label">Giá</label><input id="pPrice" type="number" min="0" class="form-control" required /></div><div class="col-md-2"><label class="form-label">Số lượng</label><input id="pStock" type="number" min="0" value="100" class="form-control" required /></div><div class="col-md-2"><label class="form-label">Trạng thái</label><select id="pActive" class="form-select"><option value="true">Đang bán</option><option value="false">Tạm ẩn</option></select></div><div class="col-md-2 d-flex align-items-end gap-2"><button class="btn btn-warning flex-fill">Lưu</button><button type="button" id="pCancelBtn" class="btn btn-outline-secondary d-none">Hủy</button></div><div class="col-md-5"><label class="form-label">Ảnh/URL</label><input id="pImage" class="form-control" /></div><div class="col-md-7"><label class="form-label">Mô tả</label><input id="pDesc" class="form-control" /></div></form></div></div>
+<div class="card border-0 shadow-sm"><div class="card-header fw-bold">Danh sách món</div><div class="card-body table-responsive"><table class="table cm-table"><thead><tr><th>Ảnh</th><th>Tên</th><th>Loại</th><th>Giá</th><th>Tổng SL</th><th>Đã bán</th><th>Còn lại</th><th>Trạng thái</th><th>Thao tác</th></tr></thead><tbody id="productTbody"></tbody></table></div></div>
+
+  <div class="tab-pane fade" id="orderTab"><div class="card border-0 shadow-sm"><div class="card-header bg-warning fw-bold">Quản lý đơn hàng</div><div class="card-body table-responsive"><table class="table cm-table"><thead><tr><th>Mã</th><th>Khách</th><th>Nhân viên</th><th>Món</th><th>Tổng</th><th>Thanh toán</th><th>Trạng thái</th><th>Cập nhật</th></tr></thead><tbody id="orderTbody"></tbody></table></div></div></div>
+
+  <div class="tab-pane fade" id="userTab">
+    <div class="card border-0 shadow-sm mb-4"><div class="card-header bg-warning fw-bold">Thêm / sửa tài khoản</div><div class="card-body"><form id="userForm" class="row g-3"><input type="hidden" id="uOriginal" /><div class="col-md-3"><input id="uUsername" class="form-control" placeholder="Tên đăng nhập" required /></div><div class="col-md-3"><input id="uName" class="form-control" placeholder="Họ tên" required /></div><div class="col-md-3"><input id="uEmail" type="email" class="form-control" placeholder="Email" required /></div><div class="col-md-3"><input id="uPhone" class="form-control" placeholder="Số điện thoại" required /></div><div class="col-md-3"><input id="uPass" type="password" class="form-control" placeholder="Mật khẩu" /></div><div class="col-md-3"><select id="uRole" class="form-select"><option value="staff">Nhân viên</option><option value="admin">Admin</option></select></div><div class="col-md-3"><select id="uActive" class="form-select"><option value="true">Hoạt động</option><option value="false">Đã khóa</option></select></div><div class="col-md-3 d-flex gap-2"><button class="btn btn-warning flex-fill">Lưu</button><button type="button" id="uCancelBtn" class="btn btn-outline-secondary d-none">Hủy</button></div></form></div></div>
+    <div class="card border-0 shadow-sm"><div class="card-header fw-bold">Danh sách tài khoản</div><div class="card-body table-responsive"><table class="table cm-table"><thead><tr><th>Tài khoản</th><th>Họ tên</th><th>Email</th><th>Vai trò</th><th>Trạng thái</th><th>Thao tác</th></tr></thead><tbody id="userTbody"></tbody></table></div></div>
+  </div>
+
+  <div class="tab-pane fade" id="reviewTab"><div class="card border-0 shadow-sm"><div class="card-header bg-warning fw-bold">Quản lý đánh giá khách hàng</div><div class="card-body table-responsive"><table class="table cm-table"><thead><tr><th>Mã đơn</th><th>Khách</th><th>Điểm</th><th>Nội dung</th><th>Người nhập</th><th>Ngày</th><th>Thao tác</th></tr></thead><tbody id="reviewTbody"></tbody></table></div></div></div>
+
+  <div class="tab-pane fade" id="revenueTab"><div class="card border-0 shadow-sm"><div class="card-header bg-warning fw-bold">Báo cáo doanh thu</div><div class="card-body"><div class="row g-3 align-items-end"><div class="col-md-3"><label class="form-label">Từ ngày</label><input id="revFrom" type="date" class="form-control" /></div><div class="col-md-3"><label class="form-label">Đến ngày</label><input id="revTo" type="date" class="form-control" /></div><div class="col-md-2"><button id="filterRevenueBtn" class="btn btn-warning w-100">Thống kê</button></div><div class="col-md-4"><div class="alert alert-success mb-0"><b>Tổng doanh thu:</b> <span id="revTotal">0đ</span><br /><b>Số đơn đã thanh toán:</b> <span id="revOrderCount">0</span></div></div></div><div class="table-responsive mt-4"><table class="table cm-table"><thead><tr><th>Ngày</th><th>Số đơn</th><th>Doanh thu</th></tr></thead><tbody id="revenueTbody"></tbody></table></div></div></div></div>
+</div>
+</div>
+<div class="toast-container position-fixed top-0 end-0 p-3" id="toastArea"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script src="js/app.js?v=10"></script><script>document.addEventListener("DOMContentLoaded",()=>bootPage("admin"));</script>
+</body>
+</html>
